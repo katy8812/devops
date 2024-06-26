@@ -20,8 +20,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.withRegistry( 'https://hub.docker.com/', USUARIO ) {
-                        def customImage = docker.build(IMAGEN)
+                    docker.withRegistry( 'https://hub.docker.com/', $USUARIO ) {
+                        def customImage = docker.build($IMAGEN)
                         customImage.push()
                     }
                 }
