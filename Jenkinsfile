@@ -20,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    docker.withRegistry( '', USUARIO ) {
+                    docker.withRegistry( 'https://hub.docker.com/', USUARIO ) {
                         newApp.push()
                     }
                 }
