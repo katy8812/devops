@@ -1,7 +1,7 @@
 pipeline {
     environment {
         IMAGEN = "josedom24/myapp"
-        USUARIO = 'paulmanosalvas1@gmail.com/Mega.2024'
+        USUARIO = 'USER_DOCKERHUB'
     }
     agent any
     stages {
