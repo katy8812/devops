@@ -21,8 +21,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry( '', USUARIO ) {
-                        def customImage = docker.build(IMAGEN)
-                        customImage.push()
+                        newApp.push()
                     }
                 }
             }
